@@ -39,10 +39,12 @@ let playerTwoChoice = "";
 
 //Start page
 onePlayerMode.addEventListener('click', function (e) {
+    resetBtn.style.display = 'block';
     P1_Name();
 });
 
 twoPlayerMode.addEventListener('click', function (e) {
+    resetBtn.style.display = 'block';
     isPlayerTwo = true;
     P1_Name();
 });
@@ -373,11 +375,11 @@ function restartGame() {
     continueAfterResult.style.display = 'none';
     submitPOneChoice.style.display = 'none';
     submitPTwoChoice.style.display = 'none';
+    resetBtn.style.display = 'none';
 
     onePlayerMode.style.display = 'block';
     twoPlayerMode.style.display = 'block';
     rulesBtn.style.display = 'block';
-    resetBtn.style.display = 'block';
     topTitle.textContent = "Rock Paper Scissors (Lizard Spock)";
 
     isPlayerTwo = false;
