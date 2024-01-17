@@ -2,7 +2,6 @@
 let topTitle = document.getElementById("topTitle");
 let onePlayerMode = document.getElementById("onePlayerMode");
 let twoPlayerMode = document.getElementById("twoPlayerMode");
-let rulesBtn = document.getElementById("rulesBtn");
 let resetBtn = document.getElementById("resetBtn");
 
 let nameInput = document.getElementById("nameInput");
@@ -339,11 +338,11 @@ function endDisplay() {
     if (p1Points === winningPoints) {
         displayResult.style.display = 'none';
         topTitle.textContent = "Game End";
-        displayChoice.textContent = `${playerOneName} has won! They scored ${p1Points} points while ${playerTwoName} scored ${p2Points} points.`;
+        displayChoice.textContent = `${playerOneName} has won! They scored ${p1Points} point(s) while ${playerTwoName} scored ${p2Points} point(s).`;
     } else if (p2Points === winningPoints) {
         displayResult.style.display = 'none';
         topTitle.textContent = "Game End";
-        displayChoice.textContent = `${playerTwoName} has won! They scored ${p2Points} points while ${playerOneName} scored ${p1Points} points.`;
+        displayChoice.textContent = `${playerTwoName} has won! They scored ${p2Points} point(s) while ${playerOneName} scored ${p1Points} point(s).`;
     };
 };
 
@@ -379,7 +378,6 @@ function restartGame() {
 
     onePlayerMode.style.display = 'block';
     twoPlayerMode.style.display = 'block';
-    rulesBtn.style.display = 'block';
     topTitle.textContent = "Rock Paper Scissors (Lizard Spock)";
 
     isPlayerTwo = false;

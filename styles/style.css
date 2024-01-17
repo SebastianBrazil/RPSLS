@@ -1,0 +1,34 @@
+@font-face {
+    font-family: Lobster;
+    src: url(../assets/fonts/Lobster-Regular.ttf);
+}
+
+.centerTitle{
+    margin-top: 10vh;
+    font-size: 50px;
+    font-family: Lobster;
+}
+
+.inputForName{
+    margin-top: 20vh;
+}
+
+.players{
+    margin-top: 45vh;
+}
+
+.submit{
+    margin-top: 22vh;
+}
+
+.round{
+    margin-top: 20vh;
+}
+
+.choices{
+    margin-top: 20vh;
+}
+
+.displayChosenChoice{
+    margin-top: 5vh;
+}

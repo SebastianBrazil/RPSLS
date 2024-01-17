@@ -11,33 +11,98 @@
 </head>
 
 <body>
-    <p id="topTitle">Rock Paper Scissors (Lizard Spock)</p>
-    <input id="nameInput" style="display: none" type="text" placeholder="Enter Name Here">
-    <button id="onePlayerMode">One Player</button>
-    <button id="twoPlayerMode">Two Players</button>
-    <button id="submitNameOne" style="display: none">Submit</button>
-    <button id="submitNameTwo" style="display: none">Submit</button>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="text-center centerTitle" id="topTitle">Rock Paper Scissors (Lizard Spock)</p>
+            </div>
+        </div>
 
-    <button id="BOO" style="display: none">Best Of One</button>
-    <button id="BOF" style="display: none">Best Of Five</button>
-    <button id="BOS" style="display: none">Best Of Seven</button>
+        <div class="row">
+            <div class="col d-flex justify-content-evenly">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Rules
+                </button>
 
-    <button id="rock" style="display: none">Rock</button>
-    <button id="paper" style="display: none">Paper</button>
-    <button id="scissors" style="display: none">Scissors</button>
-    <button id="lizard" style="display: none">Lizard</button>
-    <button id="spock" style="display: none">Spock</button>
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <h1 class="modal-title fs-5 d-flex justify-content-center" id="staticBackdropLabel">Rules
+                            </h1>
+                            <hr>
+                            <div class="modal-body">
+                                This game is just like Rock, Paper, Scissors, just with more options! <br>
+                                Here are all of the possible combinations including Lizard and Spock: <br>
+                                Scissors beats paper. <br>
+                                Scissors beats lizard. <br>
+                                Rock beats lizard. <br>
+                                Rock beats scissors. <br>
+                                Paper beats rock. <br>
+                                Paper beats Spock. <br>
+                                Lizard beats Spock. <br>
+                                Lizard beats paper. <br>
+                                Spock beats scissors. <br>
+                                Spock beats rock. <br>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="resetBtn" style="display: none">Reset Game</button>
+            </div>
+        </div>
 
-    <p id="displayChoice" style="display: none;">You Have Not Selected Anything</p>
-    <p id="displayResult" style="display: none;">Here Goes Response</p>
+        <div class="row">
+            <div class="col d-flex justify-content-evenly">
+                <input class="inputForName" id="nameInput" style="display: none" type="text" placeholder="Enter Name Here">
+            </div>
+        </div>
 
-    <button id="submitPOneChoice" style="display: none">Submit</button>
-    <button id="submitPTwoChoice" style="display: none">Submit</button>
-    <button id="continueAfterResult" style="display: none">Continue</button>
-    <button id="restartOnceMore" style="display: none">Restart</button>
+        <div class="row">
+            <div class="col d-flex justify-content-evenly">
+                <button class="players" id="onePlayerMode">One Player</button>
+                <button class="players" id="twoPlayerMode">Two Players</button>
+                <button class="submit" id="submitNameOne" style="display: none">Submit</button>
+                <button class="submit" id="submitNameTwo" style="display: none">Submit</button>
 
-    <button id="rulesBtn">Rules</button>
-    <button id="resetBtn" style="display: none">Reset Game</button>
+                <button class="round" id="BOO" style="display: none">Best Of One</button>
+                <button class="round" id="BOF" style="display: none">Best Of Five</button>
+                <button class="round" id="BOS" style="display: none">Best Of Seven</button>
+
+                <button class="choices" id="rock" style="display: none">Rock</button>
+                <button class="choices" id="paper" style="display: none">Paper</button>
+                <button class="choices" id="scissors" style="display: none">Scissors</button>
+                <button class="choices" id="lizard" style="display: none">Lizard</button>
+                <button class="choices" id="spock" style="display: none">Spock</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col d-flex justify-content-evenly">
+                <p class="displayChosenChoice" id="displayChoice" style="display: none;">You Have Not Selected Anything</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col d-flex justify-content-evenly">
+                <p id="displayResult" style="display: none;">Here Goes Response</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col d-flex justify-content-evenly">
+                <button id="submitPOneChoice" style="display: none">Submit</button>
+                <button id="submitPTwoChoice" style="display: none">Submit</button>
+                <button id="continueAfterResult" style="display: none">Continue</button>
+                <button id="restartOnceMore" style="display: none">Restart</button>
+            </div>
+        </div>
+    </div>
 
 
 
