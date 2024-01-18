@@ -8,15 +8,36 @@
     src: url(../assets/fonts/CormorantInfant-Medium.ttf);
 }
 
+body {
+    background-image: url(../assets/pictures/shell.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-color: #050100;
+    background-size: 1920px;
+}
+
 .centerTitle{
     margin-top: 10vh;
     font-size: 90px;
     font-family: Lobster;
+    color: crimson;
+}
+
+.buttonImeg{
+    background-image: url(../assets/pictures/468px-Event_button_547.png);
+    background-size: 300px 100px;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 100px;
+
+    border: none;
+    /* color: #050100; */
 }
 
 .CI_Font{
     font-family: CI;
     font-size: 40px;
+    color: crimson;
 }
 
 .inputForName{
