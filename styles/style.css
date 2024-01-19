@@ -26,8 +26,8 @@ body {
     font-size: 90px;
     font-family: Lobster;
     color: crimson;
-    padding-left: 200px;
-    padding-right: 200px;
+    padding-left: 190px;
+    padding-right: 190px;
     text-shadow: 1px 1px black;
 }
 
@@ -62,10 +62,6 @@ body {
     font-family: CIB;
 }
 
-.inputForName{
-    /* margin-top: 20vh; */
-}
-
 .relocateReset{
     position: absolute;
     top: 85%;
@@ -87,7 +83,7 @@ body {
 }
 
 .round{
-    margin-top: 10vh;
+    margin-top: 20vh;
 }
 
 .choices{
@@ -111,14 +107,23 @@ body {
 }
 
 .customBtn{
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-bottom: 50px;
+    margin: 20px 27% 40px;
 }
 
 .somePadding{
     padding-left: 150px;
     padding-right: 150px;
+}
+
+.bigBox{
+    width: 900px; 
+    margin-left: -40%;   
+    background-color: blanchedalmond;
+}
+
+.rulesTitle{
+    margin-top: 1vh;
+    margin-bottom: -1vh;
 }
 
 .rockBG{
