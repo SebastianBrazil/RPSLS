@@ -1,6 +1,7 @@
 //Declarations
 let topTitle = document.getElementById("topTitle");
 let onePlayerMode = document.getElementById("onePlayerMode");
+let onePlayerRiggedMode = document.getElementById("onePlayerRiggedMode");
 let twoPlayerMode = document.getElementById("twoPlayerMode");
 let resetBtn = document.getElementById("resetBtn");
 
@@ -27,6 +28,7 @@ let restartOnceMore = document.getElementById("restartOnceMore");
 
 //Variables
 let isPlayerTwo = false;
+let isRigged = false;
 let isP1Turn = true;
 let playerOneName;
 let playerTwoName;
@@ -42,6 +44,12 @@ onePlayerMode.addEventListener('click', function (e) {
     P1_Name();
 });
 
+onePlayerRiggedMode.addEventListener('click', function (e) {
+    isRigged = true;
+    resetBtn.style.display = 'block';
+    P1_Name();
+});
+
 twoPlayerMode.addEventListener('click', function (e) {
     resetBtn.style.display = 'block';
     isPlayerTwo = true;
@@ -52,6 +60,7 @@ twoPlayerMode.addEventListener('click', function (e) {
 function P1_Name() {
     topTitle.textContent = "Enter Player One's Name";
     onePlayerMode.style.display = 'none';
+    onePlayerRiggedMode.style.display = 'none';
     twoPlayerMode.style.display = 'none';
     submitNameOne.style.display = 'block';
     nameInput.style.display = 'block';
@@ -187,6 +196,8 @@ spock.addEventListener('click', e => {
 submitPOneChoice.addEventListener('click', function (e) {
     if (isPlayerTwo === true && playerOneChoice !== "") {
         P2_StartTurn();
+    } else if (isRigged === true && playerOneChoice !== "") {
+        RiggedComputerTurn();
     } else if (playerOneChoice === "") {
         displayChoice.innerText = "Please Select Before Submitting";
     } else {
@@ -196,12 +207,44 @@ submitPOneChoice.addEventListener('click', function (e) {
 
 //Function if playing single player
 async function ComputerTurn() {
-    const promise = await fetch('https://rpslsapi.azurewebsites.net/RPSLS')
+    const promise = await fetch('http://localhost:5070/rpslsRandomGen/Response')
     const data = await promise.text();
 
     submitPOneChoice.style.display = 'none';
-    playerTwoName = "The Singularity";
+    playerTwoName = "The Computer";
     playerTwoChoice = data;
+    OpenResults();
+};
+
+//Function if playing rigged
+function RiggedComputerTurn() {
+    let bobbert = Math.floor(Math.random() * 2);
+
+    switch (playerOneChoice) {
+        case "Rock":
+            let win1 = ["Paper", "Spock"]
+            playerTwoChoice = win1[bobbert];
+            break;
+        case "Paper":
+            let win2 = ["Scissors", "Lizard"]
+            playerTwoChoice = win2[bobbert];
+            break;
+        case "Scissors":
+            let win3 = ["Rock", "Spock"]
+            playerTwoChoice = win3[bobbert];
+            break;
+        case "Lizard":
+            let win4 = ["Rock", "Scissors"]
+            playerTwoChoice = win4[bobbert];
+            break;
+        case "Spock":
+            let win5 = ["Paper", "Lizard"]
+            playerTwoChoice = win5[bobbert];
+            break;
+    };
+
+    submitPOneChoice.style.display = 'none';
+    playerTwoName = "The Singularity";
     OpenResults();
 };
 
@@ -379,12 +422,14 @@ function restartGame() {
     resetBtn.style.display = 'none';
 
     onePlayerMode.style.display = 'block';
+    onePlayerRiggedMode.style.display = 'block';
     twoPlayerMode.style.display = 'block';
     topTitle.textContent = "Rock Paper Scissors (Lizard Spock)";
 
     displayChoice.className = "displayChosenChoice somePadding CI_Font";
 
     isPlayerTwo = false;
+    isRigged = false;
     isP1Turn = true;
     playerOneName;
     playerTwoName;
