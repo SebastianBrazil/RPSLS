@@ -8,6 +8,11 @@
     src: url(../assets/fonts/CormorantInfant-Medium.ttf);
 }
 
+@font-face {
+    font-family: CIB;
+    src: url(../assets/fonts/CormorantInfant-Bold.ttf);
+}
+
 body {
     background-image: url(../assets/pictures/shell.png);
     background-position: top;
@@ -23,6 +28,7 @@ body {
     color: crimson;
     padding-left: 200px;
     padding-right: 200px;
+    text-shadow: 1px 1px black;
 }
 
 .buttonImeg{
@@ -48,30 +54,60 @@ body {
     font-size: 40px;
     color: crimson;
     text-align: center;
+    text-shadow: 1px 1px black;
+}
+
+.choiceThicc{
+    font-size: 60px;
+    font-family: CIB;
 }
 
 .inputForName{
-    margin-top: 20vh;
+    /* margin-top: 20vh; */
+}
+
+.relocateReset{
+    position: absolute;
+    top: 85%;
+    right: 5%;
+}
+
+.relocateRules{
+    position: absolute;
+    top: 85%;
+    left: 5%;
 }
 
 .players{
-    margin-top: 45vh;
+    margin-top: 25vh;
 }
 
 .submit{
-    margin-top: 22vh;
+    margin-top: 10vh;
 }
 
 .round{
-    margin-top: 20vh;
+    margin-top: 10vh;
 }
 
-/* .choices{
-    margin-top: 20vh;
-} */
+.choices{
+    margin-top: 3vh;
+}
 
 .displayChosenChoice{
-    margin-top: 5vh;
+    margin-top: 1vh;
+}
+
+.resultSpacing{
+    margin-top: 10vh;
+}
+
+.resultBtnSpacing{
+    margin-top: 10vh;
+}
+
+.nameSpacing{
+    margin-top: 20vh;
 }
 
 .customBtn{
@@ -87,50 +123,55 @@ body {
 
 .rockBG{
     background-image: url(../assets/pictures/rock.png);
-    background-size: 400px 400px;
+    background-size: contain;
     background-repeat: no-repeat;
     width: 400px;
     height: 400px;
     border: none;
     background-color: transparent;
+    background-position: center;
 }
 
 .paperBG{
     background-image: url(../assets/pictures/paper.png);
-    background-size: 400px 400px;
+    background-size: contain;
     background-repeat: no-repeat;
     width: 400px;
     height: 400px;
     border: none;
     background-color: transparent;
+    background-position: center;
 }
 
 .scissorsBG{
     background-image: url(../assets/pictures/scissors.png);
-    background-size: 400px 400px;
+    background-size: contain;
     background-repeat: no-repeat;
     width: 400px;
     height: 400px;
     border: none;
     background-color: transparent;
+    background-position: center;
 }
 
 .lizardBG{
     background-image: url(../assets/pictures/lizard.png);
-    background-size: 400px 400px;
+    background-size: contain;
     background-repeat: no-repeat;
     width: 400px;
     height: 400px;
     border: none;
     background-color: transparent;
+    background-position: center;
 }
 
 .spockBG{
     background-image: url(../assets/pictures/Spockuurt.png);
-    background-size: 400px 400px;
+    background-size: contain;
     background-repeat: no-repeat;
     width: 400px;
     height: 400px;
     border: none;
     background-color: transparent;
+    background-position: center;
 }

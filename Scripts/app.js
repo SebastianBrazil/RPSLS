@@ -235,6 +235,7 @@ function OpenResults() {
 
     displayResult.style.display = 'block';
     continueAfterResult.style.display = 'block';
+    displayChoice.className = "displayChosenChoice somePadding CI_Font resultSpacing";
     displayChoice.innerText = `${playerOneName} selected ${playerOneChoice} and ${playerTwoName} selected ${playerTwoChoice}`;
 
     if (playerOneChoice === playerTwoChoice) {
@@ -323,6 +324,7 @@ function OpenResults() {
 //Checks if winningPoints number is met by any player
 continueAfterResult.addEventListener('click', function (e) {
     if (p1Points !== winningPoints && p2Points !== winningPoints) {
+        displayChoice.className = "displayChosenChoice somePadding CI_Font";
         isP1Turn = true;
         P1_StartTurn();
     } else {
@@ -379,6 +381,8 @@ function restartGame() {
     onePlayerMode.style.display = 'block';
     twoPlayerMode.style.display = 'block';
     topTitle.textContent = "Rock Paper Scissors (Lizard Spock)";
+
+    displayChoice.className = "displayChosenChoice somePadding CI_Font";
 
     isPlayerTwo = false;
     isP1Turn = true;
