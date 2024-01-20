@@ -11,3 +11,5 @@ This program is a website that allows the user to play Rock Paper Scissor Lizard
 Peer Review: Jared Ly
 Code looks good and i was suprised to see that you used services to create your own api which was a nice addition, also the rigged gamemode was pretty entertaining and the styling was very appealing.
 One thing though, the single player didnt seem to work properly as when i clicked a icon, then submit it did not seem to do anything. But other than a few small bugfixes everything looks great.
+
+(He didn't console dotnet run 😔)

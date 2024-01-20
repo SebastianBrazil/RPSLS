@@ -1,3 +1,5 @@
+// To allow the local API to function, please open the terminal and type 'dotnet run' thanks
+
 //Declarations
 let topTitle = document.getElementById("topTitle");
 let onePlayerMode = document.getElementById("onePlayerMode");
