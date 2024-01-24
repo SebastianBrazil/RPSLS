@@ -207,9 +207,20 @@ submitPOneChoice.addEventListener('click', function (e) {
     };
 });
 
+//Function if playing single player, broken :(
+// async function ComputerTurn() {
+//     const promise = await fetch('http://localhost:5070/rpslsRandomGen/Response')
+//     const data = await promise.text();
+
+//     submitPOneChoice.style.display = 'none';
+//     playerTwoName = "The Computer";
+//     playerTwoChoice = data;
+//     OpenResults();
+// };
+
 //Function if playing single player
 async function ComputerTurn() {
-    const promise = await fetch('http://localhost:5070/rpslsRandomGen/Response')
+    const promise = await fetch('https://rpslsapi.azurewebsites.net/RPSLS')
     const data = await promise.text();
 
     submitPOneChoice.style.display = 'none';
